@@ -8,11 +8,11 @@ import { Project } from '../project';
 export class ProjectComponent implements OnInit {
 	projects = [
 		new Project(
-			'Communication',
+			'Jeanne',
 			'George Bernard Show',
 			'The single biggest problem in communication is the illusion that it has taken place.'
 		),
-		new Project('Women', 'Anna Held', 'A woman should be like a single flower, not a whole bouquet.')
+		new Project('Aline', 'Anna Held', 'A woman should be like a single flower, not a whole bouquet.')
 	];
 	number: number;
 	number1: number;
