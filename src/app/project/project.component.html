@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <h1>QUOTES</h1>
+</div>
+
+<app-form (emitQuote)="addProject($event)"></app-form>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <hr>
+      <div class="myQuote" *ngFor="let project of projects; let i=index">
+        <p appHighlight *ngIf="highestUpvote()===project.upvotes && project.upvotes>0">{{project.project}}</p>
+        <p *ngIf="highestUpvote()!==project.upvotes || project.upvotes===0">{{project.project}}</p>
+        <app-details [project]="project"></app-details>
+        <button class="btn btn-primary" (click)="upvote(i)">Upvote</button>
+        <button class="btn" (click)="downvote(i)">Downvote</button>
+        <button class="btn btn-danger" (click)="delProject(i)">Delete</button>
+        <hr>
+        <div class="row">
+          <!-- <h4 id="{{i}}" appStrikethrough>{{project.project}} due on {{project.completeDate|date|uppercase}}</h4> -->
+          <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
