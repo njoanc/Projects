@@ -14,8 +14,8 @@ export class ProjectComponent implements OnInit {
 		),
 		new Project('Women', 'Anna Held', 'A woman should be like a single flower, not a whole bouquet.')
 	];
-	preNum: number;
-	lastNum: number;
+	number: number;
+	number1: number;
 	counter: number;
 
 	addProject(emittedProject) {
@@ -32,16 +32,16 @@ export class ProjectComponent implements OnInit {
 		this.projects.splice(i, 1);
 	}
 	highestUpvote() {
-		this.preNum = 0;
-		this.lastNum = 0;
+		this.number = 0;
+		this.number1 = 0;
 
 		for (this.counter = 0; this.counter < this.projects.length; this.counter++) {
-			this.lastNum = this.projects[this.counter].upvotes;
-			if (this.lastNum > this.preNum) {
-				this.preNum = this.lastNum;
+			this.number1 = this.projects[this.counter].upvotes;
+			if (this.number1 > this.number) {
+				this.number = this.number1;
 			}
 		}
-		return this.preNum;
+		return this.number1;
 	}
 	constructor() {}
 
