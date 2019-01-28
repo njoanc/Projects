@@ -9,20 +9,20 @@ export class ProjectComponent implements OnInit {
 	projects = [
 		new Project(
 			'Jeanne',
-			'The single biggest problem in communication is the illusion that it has taken place.',
-			'George Bernard Show'
+			'George Bernard Show',
+			'The single biggest problem in communication is the illusion that it has taken place.'
 		),
-		new Project('Aline', 'A woman should be like a single flower, not a whole bouquet', 'Anna Held')
+		new Project('Aline', 'Anna Held', 'A woman should be like a single flower, not a whole bouquet.')
 	];
-	toogleDetails(index){
-        this.projects[index].showDescription = !this.projects[index].showDescription;
-    }
 	number: number;
 	number1: number;
 	counter: number;
 
 	addProject(emittedProject) {
 		this.projects.push(emittedProject);
+	}
+	toogleDetails(y) {
+		this.projects.splice(y, 1);
 	}
 
 	upvote(i) {
@@ -49,8 +49,4 @@ export class ProjectComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit() {}
-
-	// toogleDetails(index) {
-	// 	this.projects[index].showDescription = !this.projects[index].showDescription;
-	}
 }
