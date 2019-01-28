@@ -9,11 +9,14 @@ export class ProjectComponent implements OnInit {
 	projects = [
 		new Project(
 			'Jeanne',
-			'George Bernard Show',
-			'The single biggest problem in communication is the illusion that it has taken place.'
+			'The single biggest problem in communication is the illusion that it has taken place.',
+			'George Bernard Show'
 		),
-		new Project('Aline', 'Anna Held', 'A woman should be like a single flower, not a whole bouquet.')
+		new Project('Aline', 'A woman should be like a single flower, not a whole bouquet', 'Anna Held')
 	];
+	toogleDetails(index){
+        this.projects[index].showDescription = !this.projects[index].showDescription;
+    }
 	number: number;
 	number1: number;
 	counter: number;
@@ -46,4 +49,8 @@ export class ProjectComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit() {}
+
+	// toogleDetails(index) {
+	// 	this.projects[index].showDescription = !this.projects[index].showDescription;
+	}
 }
