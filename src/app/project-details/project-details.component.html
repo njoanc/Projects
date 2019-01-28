@@ -15,7 +15,8 @@
     {{project.myDate}}
   </p>
   <p>{{project.description}}</p>
-  <p>complete in {{project.completeDate|dateCount}} days</p>
-  <!-- <button class="btn btn-danger" (click)='projectDelete(true)'> Delete Quotes </button> -->
+  <p><strong>This quote has been displayed in </strong>
+    <bold>{{project.completeDate|dateCount}}</bold> days
+  </p>
 </div>
 <br>
