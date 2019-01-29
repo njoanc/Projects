@@ -15,11 +15,11 @@ export class ProjectFormComponent implements OnInit {
 	theProject: any;
 
 	submitQuote() {
-		this.theProject = new Project(this.quotePublisher, this.quoteAuthor, this.quoteStr, this.newDate);
+		this.theProject = new Project(this.quotePublisher, this.quoteAuthor, this.quoteStr, new Date());
 		this.quoteStr = '';
 		this.quoteAuthor = '';
 		this.quotePublisher = '';
-		this.newDate = ' ';
+
 		this.emitQuote.emit(this.theProject);
 	}
 
