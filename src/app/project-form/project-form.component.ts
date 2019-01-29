@@ -7,6 +7,7 @@ import { Project } from '../project';
 	styleUrls: [ './project-form.component.css' ]
 })
 export class ProjectFormComponent implements OnInit {
+	newProject = new Project('', '', '', new Date());
 	@Output() emitQuote = new EventEmitter();
 	quoteStr: string;
 	quotePublisher: string;
@@ -14,10 +15,11 @@ export class ProjectFormComponent implements OnInit {
 	theProject: any;
 
 	submitQuote() {
-		this.theProject = new Project(this.quotePublisher, this.quoteAuthor, this.quoteStr);
+		this.theProject = new Project(this.quotePublisher, this.quoteAuthor, this.quoteStr, this.newDate);
 		this.quoteStr = '';
 		this.quoteAuthor = '';
 		this.quotePublisher = '';
+		this.newDate = ' ';
 		this.emitQuote.emit(this.theProject);
 	}
 

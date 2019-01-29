@@ -10,9 +10,15 @@ export class ProjectComponent implements OnInit {
 		new Project(
 			'Jeanne',
 			'George Bernard Show',
-			'The single biggest problem in communication is the illusion that it has taken place.'
+			'The single biggest problem in communication is the illusion that it has taken place.',
+			new Date(2018, 3, 14)
 		),
-		new Project('Aline', 'Anna Held', 'A woman should be like a single flower, not a whole bouquet.')
+		new Project(
+			'Aline',
+			'Anna Held',
+			'A woman should be like a single flower, not a whole bouquet.',
+			new Date(2018, 1, 12)
+		)
 	];
 	number: number;
 	number1: number;
