@@ -4,7 +4,7 @@
 
 # By Jeanne d'Arc NYIRAMWIZA
 ## Description
- This project has been created to practice the basic knowledge of Angularjs.
+ This application has been created to practice the basic knowledge of Angularjs.
 
 ## Development server
 
@@ -37,7 +37,7 @@ Angularjs, HTML and CSS
 * Run ng serve. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## User Requirements
-The project helps the user to:
+This application helps the user to:
 *Create new quote
 * Upvote or downvote a quote
 * Delete a quote
