@@ -43,3 +43,9 @@ The project helps the user to:
 * Delete a quote
 * See the number of upvotes and number od downvotes for each quote
 * The time spent since the quote has been uploaded
+
+## Contacts details
+Email: njoanc@gmail.com
+
+## LICENCE
+njoanc@2019
